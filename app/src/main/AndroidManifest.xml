@@ -1,8 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
  <uses-permission android:name="android.permission.INTERNET"/>
- <application android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:theme="@style/AppTheme" android:label="BD World Live TV" android:usesCleartextTraffic="true">
-  <activity android:name=".MainActivity" android:configChanges="orientation|screenSize|keyboardHidden" android:exported="true">
-   <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter>
+ <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+ <uses-feature android:name="android.software.leanback" android:required="false"/>
+ <application android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:banner="@mipmap/ic_launcher" android:theme="@style/AppTheme" android:label="BD World Live TV" android:usesCleartextTraffic="true">
+  <activity android:name=".MainActivity" android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden" android:exported="true">
+   <intent-filter>
+    <action android:name="android.intent.action.MAIN"/>
+    <category android:name="android.intent.category.LAUNCHER"/>
+    <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+   </intent-filter>
   </activity>
  </application>
 </manifest>
